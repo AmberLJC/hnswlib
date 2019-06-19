@@ -248,7 +248,8 @@ void sift_test1B() {
 
     sprintf(path_gt, "bigann/gnd/idx_%dM.ivecs", subset_size_milllions);
 
-
+cout << "path_gt :"<<path_gt << endl;
+cout << "path_index :"<<path_index << endl;
     unsigned char *massb = new unsigned char[vecdim];
 
     cout << "Loading GT:\n";
@@ -278,7 +279,8 @@ void sift_test1B() {
         inputQ.read((char *) massb, in);
         for (int j = 0; j < vecdim; j++) {
             massQ[i * vecdim + j] = massb[j];
-        }
+    //	cout<<massb[j]<<", ";
+    	}
 
     }
     inputQ.close();
